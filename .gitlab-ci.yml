@@ -9,4 +9,5 @@ test:
   - ls -hal
   - cd /tmp
   - pwd
+  - git clone --mirror $CI_REPOSITORY_URL
   
