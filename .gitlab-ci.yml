@@ -2,4 +2,5 @@ image: alpine
 
 test:
   script:
-  - git --version
+  - apk --no-cache add git
+  - git version
