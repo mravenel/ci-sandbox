@@ -6,5 +6,5 @@ test:
   - git version
   - git summary
   - pwd
-  - ls
+  - ls -hal
   
