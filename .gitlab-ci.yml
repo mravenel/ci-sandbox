@@ -1,14 +1,14 @@
 image: alpine
 
-test:
+stages:
+  - mirror
+  
+github-mirror:
+  stage: mirror
+  allow_failure: true
   script:
   - apk --no-cache add git
-  - git version
-  - git log
-  - pwd
-  - ls -hal
   - cd /tmp
-  - pwd
   - git clone --mirror $CI_REPOSITORY_URL
   - cd ci-sandbox.git
   - git push --mirror https://$GITHUB_TOKEN@github.com/mravenel/ci-sandbox.git
