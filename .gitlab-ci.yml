@@ -4,3 +4,7 @@ test:
   script:
   - apk --no-cache add git
   - git version
+  - git summary
+  - pwd
+  - ls
+  
