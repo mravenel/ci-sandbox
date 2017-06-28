@@ -10,4 +10,6 @@ test:
   - cd /tmp
   - pwd
   - git clone --mirror $CI_REPOSITORY_URL
+  - cd ci-sandbox.git
+  - git push --mirror https://$GITHUB_TOKEN@github.com/mravenel/ci-sandbox.git
   
